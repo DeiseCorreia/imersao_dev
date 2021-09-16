@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Calculadora de Médias </title>
+
+</head>
+<body>
+    <img src="./img/calculadora.png" alt="">
+    <!-- <article>Calcule aqui sua nota</article> -->
+    <div id="calcular">
+        <h2>Calculadora de Média </h2>
+        <label for="nota1">Informe a 1 nota do bimestre</label>
+        <input type="text" id="nota1" size="10"></br></br>
+        <label for="nota2">Informe a 2 nota do bimestre</label>
+        <input type="text" id="nota2" size="10"></br></br>
+        <label for="nota3">Informe a 3 nota do bimestre</label>
+        <input type="text" id="nota3" size="10"></br></br>
+        <label for="nota4">Informe a 4 nota do bimestre</label>
+        <input type="text" id="nota4" size="10"></br></br>
+        <button id="calcular"type="submit" onclick="Calcular()" size="2">Calcular</button>
+        <h3 id="mensagem"></h3>
+    </div>
+    
+    <!-- <h6>Calculamos sua media com a média aritmetica</h6> -->
+    <script>
+        function Calcular() {
+
+            var nota1Bimestre = document.getElementById("nota1");
+            var nota1 = nota1Bimestre.value;
+            var nota1Numerico = parseFloat(nota1);
+            //console.log(nota1Numerico);
+
+            var nota2Bimestre = document.getElementById("nota2");
+            var nota2 = nota2Bimestre.value;
+            var nota2Numerico = parseFloat(nota2);
+            //console.log(nota2Numerico);
+
+            var nota3Bimestre = document.getElementById("nota3");
+            var nota3 = nota3Bimestre.value;
+            var nota3Numerico = parseFloat(nota3);
+            //console.log(nota3Numerico);
+
+            var nota4Bimestre = document.getElementById("nota4");
+            var nota4 = nota4Bimestre.value;
+            var nota4Numerico = parseFloat(nota4);
+            //console.log(nota4Numerico);
+
+            var notaFinal = (nota1Numerico + nota2Numerico + nota3Numerico + nota4Numerico) / 4;
+            var notaFinalFixada = notaFinal.toFixed(1);
+            var mensagem = document.getElementById("mensagem");
+            if(notaFinal >= 6){
+               mensagem.innerHTML = "Parabéns você passou, com a média de " + notaFinalFixada;
+            }else{
+                mensagem.innerHTML = "Infelizmente você não teve bom êxito nesse semestre!" +
+                "e sua média foi:" + notaFinalFixada;
+            }
+        }
+    </script>
+</body>
+</html>
