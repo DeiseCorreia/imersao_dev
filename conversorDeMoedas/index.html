@@ -1,3 +1,8 @@
+<head>
+  <title>
+    Conversor de moedas
+  </title>
+</head>
 <link rel="stylesheet" type="text/css" href="style.css">
 <div class="container">
     <h1 class="page-title">
@@ -6,13 +11,14 @@
     <p class="page-subtitle">
       Descubra os valores em real R$
     </p>
-    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
+    <!-- <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br> -->
     <label for="moeda">Insira o valor</label><br>
     <input type="number" id="valor" size="2" /><br>
     <button type="submit" onclick="Converter()">Converter para R$</button>
     <button type="submit" onclick="ConverterUS()">Converter para U$</button>
     <div id="valorConvertido"></div>
     <div id="valorConvertidoUS"></div>
+
   </div>
   
     <!-- Inicio JavaScript -->
@@ -42,5 +48,18 @@
             var valorConvertido = " O Resultado em dolar é U$" + valorEmUS;
             elementoValorConvertido.innerHTML = valorConvertido;
         }
+
+        // function ConverterBit(){
+        //   var valorElemento = document.getElementById("valor");
+        //   var valor = valorElemento.value;
+        //   var valorEmDolarNumerico = parseFloat(valor);
+
+        //   var valorEmBitCoin = valorElemento * 3;
+          
+        //   var elementoValorConvertido = document.getElementById("valorConvertidoBit");
+        //     var valorConvertido = " O Resultado em Bitcoin é de:" + valorEmBitCoin;
+        //     elementoValorConvertido.innerHTML = valorConvertido;
+
+        // }
     </script>
     <!-- Fim JavaScript -->
